@@ -1,5 +1,15 @@
 # Include your code here for you second imputation method
 
+if(!require(pacman)) install.packages("pacman") ; require(pacman)
+p_load(rio, # import/export data
+       tidyverse, # tidy-data
+       skimr, # summary data
+       visdat, # visualizing missing data
+       corrplot, # Correlation Plots 
+       stargazer) # tables/output to TEX. 
+
+df <- import("https://github.com/ignaciomsarmiento/datasets/blob/main/GEIH_sample1.Rds?raw=true")
+
 # transform categorical to factor
 
 db$maxEducLevel<- factor(db$maxEducLevel)
